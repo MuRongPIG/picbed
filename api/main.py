@@ -16,5 +16,5 @@ async def create_upload_file(file: UploadFile = File(...)):
         }
 
 @app.get("/get")
-async def get_file(name :str):
-    return FileResponse('{}.jpg'.format(name))
+async def get_file(name: str):
+    return FileResponse(join(dir, '..', 'data',"{}.jpg").format(name))
